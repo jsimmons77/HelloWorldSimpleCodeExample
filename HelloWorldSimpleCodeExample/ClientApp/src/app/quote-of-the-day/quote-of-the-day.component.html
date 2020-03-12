@@ -1,0 +1,21 @@
+<p>Hey, it's {{quoteOfTheDay.dayOfTheWeek}}....check out this quote of the day from {{quoteOfTheDay.author}}:</p>
+<p>"{{quoteOfTheDay.quoteText}}" - <span class="authorName">{{quoteOfTheDay.author}}</span></p>
+<p>
+  In case you wonder what's coming up the rest of the week, here is the full list:
+</p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="quoteOfTheDayList">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Quote</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let quote of quoteOfTheDayList">
+      <td>{{ quote.dayOfTheWeek }}</td>
+      <td>{{ quote.quoteText }}</td>
+      <td>{{ quote.author }}</td>
+    </tr>
+  </tbody>
+</table>
