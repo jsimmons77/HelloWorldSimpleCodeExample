@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./quote-of-the-day.component.css']
 })
 export class QuoteOfTheDayComponent {
-  quoteOfTheDay: QuoteOfTheDay;
-  quoteOfTheDayList: QuoteOfTheDay[];
+  public quoteOfTheDay: QuoteOfTheDay;
+  public quoteOfTheDayList: QuoteOfTheDay[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     http.get<QuoteOfTheDay>(baseUrl + 'api/quoteoftheday').subscribe(result => {
@@ -22,7 +22,7 @@ export class QuoteOfTheDayComponent {
 }
 
 interface QuoteOfTheDay {
-  QuoteText: string,
-  Author: string,
-  DayOfTheWeek: string
+  quoteText: string,
+  author: string,
+  dayOfTheWeek: string
 }

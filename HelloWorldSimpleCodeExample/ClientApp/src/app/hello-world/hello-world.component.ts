@@ -17,6 +17,6 @@ export class HelloWorldComponent {
 }
 
 interface HelloWorld {
-  Message: string;
-  SubMessage: string;
+  message: string;
+  subMessage: string;
 }
